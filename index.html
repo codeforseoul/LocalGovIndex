@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+<h1>서울시 재정 자립도 그래프</h1>
+
+<object data="svg/img_mapSeoul.svg" type="image/svg+xml" width="700px" height="500px"></object>
+
+<!-- https://github.com/interactivethings/gsheets -->
+<script src="js/gsheets.js"></script>
+<script>
+    gsheets.getWorksheet('1TjLdOyilM6NIx_Rv2WOQdFvTOu7KyYCHiWUxfMs4eSw', function(err, res) {
+        console.log(res);
+    });
+
+</script>
+
+<!--
+<h1>전국 재정 자립도 </h1>
+
+<object data="svg/img_mapSouthKorea.svg" type="image/svg+xml" width="700px" height="800px"></object>
+
+
+<script>
+    $("g").mouseover(function(event) {
+        var _path = event.target;
+        var city_name = _path.id;
+        var new_p = document.createElement('p');
+
+        var province = $(_path).parent()[0].id;
+        d3.select(_path).style("fill", "red");
+        console.log(province, city_name);
+    }).mouseout(function(event) {
+        var _path = event.target;
+        d3.select(_path).style("fill", "#B9B9B9");
+    });
+</script>
+-->
+</body>
+</html>
