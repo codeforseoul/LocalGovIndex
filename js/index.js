@@ -3,7 +3,12 @@ gsheets.getWorksheet(
   "서울구재정자립도(오픈)",
   function(err, res) {
     if (err) throw new Error(err)
-    
+
+    document.querySelector(".js-year-selector")
+    .addEventListener("change", function(e) {
+      getDistributionByYear(e.target.id, res.data)
+    })
+
     getDistributionByYear(2014, res.data)
   })
 
