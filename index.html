@@ -6,9 +6,9 @@
 
 </head>
 <body>
-<h1>서울시 재정 자립도 그래프</h1>
+<h1>서울시 재정 자립도 그래프 </h1>
 
-<object data="svg/img_mapSeoul.svg" type="image/svg+xml" width="700px" height="500px"></object>
+<object data="http://upload.wikimedia.org/wikipedia/commons/a/ae/Seoul_districts.svg" type="image/svg+xml" width="1000px" height="500px"></object>
 
 <!-- https://github.com/interactivethings/gsheets -->
 <script src="js/gsheets.js"></script>
@@ -19,6 +19,23 @@
 
 </script>
 
+
+<script>
+    $("g").mouseover(function(event) {
+        var _path = event.target;
+        var city_name = _path.id;
+        var new_p = document.createElement('p');
+
+        var province = $(_path).parent()[0].id;
+        d3.select(_path).style("fill", "red");
+        console.log(province, city_name);
+    }).mouseout(function(event) {
+        var _path = event.target;
+        d3.select(_path).style("fill", "#B9B9B9");
+    });
+</script>
+
+<p id="mouse_over"> 무슨동? </p>
 <!--
 <h1>전국 재정 자립도 </h1>
 
