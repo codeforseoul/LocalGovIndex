@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<section class="row section call-to-action">
+    <div class="row-content buffer even">
+        <!--<p>Have you fallen in love with Beetle?</p>-->
+        <h3>서울시 지역별 재정 자립도 그래프</h3>
+        <!--<a class="button red" href="#">Buy it now!</a>-->
+    </div>
+    <div class="column two"></div>
+    <div class="column five">
+        <object id="seoulmap" class="js-map" data="svg/map-seoul.svg" type="image/svg+xml" width="700px" height="500px"></object>
+    </div>
+    <div class="column two last">
+        <div class="js-year-selector select_panel">
+            <input name="year-selector" type="radio" id="2010"/>
+            <label for="2010">2010</label><br/>
+            <input name="year-selector" type="radio" id="2011"/>
+            <label for="2011">2011</label><br/>
+            <input name="year-selector" type="radio" id="2012"/>
+            <label for="2012">2012</label><br/>
+            <input name="year-selector" type="radio" id="2013"/>
+            <label for="2013">2013</label><br/>
+            <input name="year-selector" type="radio" id="2014" checked/>
+            <label for="2014">2014</label><br/>
+        </div>
+    </div>
+</section>
+
+<text class="tooltip" id="display" x="0" y="0" visibility="hidden">  test </text>
+
+
+<!-- <script src="http://code.jquery.com/jquery&#45;1.11.2.min.js"></script> -->
+<!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/Chart.js"></script>
+<script src="js/gsheets.js"></script>
+<script src="js/index.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/beetle.js"></script>
+
+
+<script>
+
+//    document.getElementById('seoulmap').onmouseover = function() {
+//        displayGuName("hi");
+//    }
+
+$("seoulmap").onmouseover(function(event) {
+//        var _path = event.target;
+//        var city_name = _path.id;
+//        var new_p = document.createElement('p');
+//
+//        var province = $(_path).parent()[0].id;
+//        d3.select(_path).style("fill", "red");
+//        console.log(province, city_name);
+        displayGuName("hi");
+        console.log("over");
+    }).mouseout(function(event) {
+//        var _path = event.target;
+//        d3.select(_path).style("fill", "#B9B9B9");
+        displayGuName("no");
+        console.log("out");
+    });
+
+    function displayGuName(guname) {
+        document.getElementById("display").innerHTML = guname;
+    }
+
+
+</script>
+
+
+</body>
+</html>
