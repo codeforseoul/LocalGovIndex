@@ -176,7 +176,43 @@ h6 {
  /* This overwrites a layers.css rule */;
 }
 
+.fill1 {
+    font-size:15px;
+    background-color: #fb4d32;
+}
 
+.fill2 {
+    font-size:15px;
+    bacground-color: #f9726a;
+}
+.fill3 {
+    font-size:15px;
+    bacground-color: #f6b2ab;
+}
+.fill4 {
+    font-size:15px;
+    bacground-color: #f5dfdb;
+}
+.fill5 {
+    font-size:15px;
+    bacground-color: #bbdefb;
+}
+.fill6 {
+    font-size:15px;
+    bacground-color: #64b5f6;
+}
+.fill7 {
+    font-size:15px;
+    bacground-color: #2196f3;
+}
+.fill8 {
+    font-size:15px;
+    bacground-color: #1976d2;
+}
+.fill9 {
+    font-size:15px;
+    bacground-color: #0d47a1;
+}
 /*----------------------------------------------------------------
     Loaders
 ----------------------------------------------------------------*/
