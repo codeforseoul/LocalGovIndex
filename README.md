@@ -25,7 +25,7 @@
 * 구글 크롬 on Mac 에서만 테스트해서 다른 브라우저의 호환성은 장담 못함 
 
 아니면 그냥 링크 클릭
-[바로보기](http://netfish88.github.io/CodeForSeoul_LocalGovIndex/)
+[바로보기](http://codeforseoul.org/LocalGovIndex)
 
 
 ### How to make it 
